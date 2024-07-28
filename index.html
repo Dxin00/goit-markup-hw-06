@@ -17,6 +17,11 @@
         <div class="container header-container">
             <nav class="header-nav">
                 <a href="./index.html" class="logo">Web<span class="logo-dark">Studio</span></a>
+                <button class="menu-btn header-menu-btn" type="menu" aria-label="Open mobile menu button">
+                    <svg class="icons" width="24" height="24">
+                        <use href="./images/icons.svg#icon-menu"></use>
+                    </svg>
+                </button>
                 <ul class="header-list">
                     <li><a href="./index.html" class="header-link active">Studio</a></li>
                     <li><a href="" class="header-link">Portfolio</a></li>
@@ -39,7 +44,7 @@
         <section class="section section-hero">
             <div class="container hero-container">
                 <h1 class="hero-title">Effective Solutions<br>for Your Business</h1>
-                <button type="button" class="hero-btn">Order Service</button>
+                <button type="button" class="hero-btn" data-modal-open>Order Service</button>
             </div>
         </section>
         <section class="section section-features">
@@ -257,88 +262,143 @@
                 </ul>
             </div>
         </section>
-        <section class="section section-portfolio">
+         <section class="section portfolio">
             <div class="container">
                 <h2 class="sub-heading">Our Portfolio</h2>
                 <ul class="portfolio-list">
                     <li class="portfolio-item">
                         <div class="portfolio-item-wrapper">
-                            <img src="./images/portfolio/bankingapp.jpg" alt="Image of Banking App Interface developed by WebStudio" width="360">
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="./images/portfolio/bankingapp-tabl-min.jpg 1x, ./images/portfolio/bankingapp-tabl@2x-min.jpg 2x" type="image/jpg" />
+                                <source media="(min-width: 1158px)" srcset="./images/portfolio/bankingapp-desk-min.jpg 1x, ./images/portfolio/bankingapp-desk@2x-min.jpg 2x" type="image/jpg" />
+                                <img class="portfolio-item-img" srcset="./images/portfolio/img-1-mob-min.jpg 1x, ./images/portfolio/bankingapp-mob@2x-min.jpg 2x" type="image/jpg" src="./images/portfolio/bankingapp-mob-min.jpg" alt="Image of Banking App Interface developed by WebStudio" width="288px" loading="lazy">
+                            </picture>
                             <p class="overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App ·
                                 Exotic Fruit Ecommerce App ·
                                 Cloud Storage App</p>
                         </div>
-                        <div class="portfolio-info">
-                            <h3 class="portfolio-subtitle">Banking App</h3>
-                            <p class="portfolio-text">App</p>
+                        <div class="portfolio-item-content">
+                            <h3 class="features-subtitle">Banking App</h3>
+                            <p class="features-text">App</p>
                         </div>
                     </li>
                     <li class="portfolio-item">
                         <div class="portfolio-item-wrapper">
-                            <img src="./images/portfolio/cashlesspayment.jpg"
-                                alt="Photo of using the cashless payment system developed by WebStudio" width="360">
+                            <picture>
+                                <source media="(min-width: 768px)"
+                                    srcset="./images/portfolio/cashlesspayment-tabl-min.jpg 1x, ./images/portfolio/cashlesspayment-tabl@2x-min.jpg 2x"
+                                    type="image/jpg" />
+                                <source media="(min-width: 1158px)"
+                                    srcset="./images/portfolio/cashlesspayment-desk-min.jpg 1x, ./images/portfolio/cashlesspayment-desk@2x-min.jpg 2x"
+                                    type="image/jpg" />
+                                <img class="portfolio-item-img"
+                                    srcset="./images/portfolio/cashlesspayment-mob-min.jpg 1x, ./images/portfolio/cashlesspayment-mob@2x-min.jpg 2x" type="image/jpg"
+                                    src="./images/portfolio/cashlesspayment-mob-min.jpg" alt="Photo of using the cashless payment system developed by WebStudio"
+                                    width="288px" loading="lazy">
+                            </picture>
                             <p class="overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App ·
                             Cloud Storage App</p>
                         </div>
-                        <div class="portfolio-info">
-                            <h3 class="portfolio-subtitle">Cashless Payment</h3>
-                            <p class="portfolio-text">Marketing</p>
+                        <div class="portfolio-item-content">
+                            <h3 class="features-subtitle">Cashless Payment</h3>
+                            <p class="features-text">Marketing</p>
                         </div>
                     </li>
                     <li class="portfolio-item">
                         <div class="portfolio-item-wrapper">
-                            <img src="./images/portfolio/meditationapp.jpg" alt="Image of Meditation App developed by WebStudio"
-                                width="360">
+                            <picture>
+                                <source media="(min-width: 768px)"
+                                    srcset="./images/portfolio/meditationapp-tabl-min.jpg 1x, ./images/portfolio/meditationapp-tabl@2x-min.jpg 2x"
+                                    type="image/jpg" />
+                                <source media="(min-width: 1158px)"
+                                    srcset="./images/portfolio/meditationapp-desk-min.jpg 1x, ./images/portfolio/meditationapp-desk@2x-min.jpg 2x"
+                                    type="image/jpg" />
+                                <img class="portfolio-item-img"
+                                    srcset="./images/portfolio/meditationapp-mob-min.jpg 1x, ./images/portfolio/meditationapp-mob@2x-min.jpg 2x" type="image/jpg"
+                                    src="./images/portfolio/meditationapp-mob-min.jpg"
+                                    alt="Image of Meditation App developed by WebStudio" width="288px" loading="lazy">
+                            </picture>
                             <p class="overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App ·
                                 Exotic Fruit Ecommerce App ·
                                 Cloud Storage App</p>
                         </div>
-                        <div class="portfolio-info">
-                            <h3 class="portfolio-subtitle">Meditation App</h3>
-                            <p class="portfolio-text">App</p>
+                        <div class="portfolio-item-content">
+                            <h3 class="features-subtitle">Meditation App</h3>
+                            <p class="features-text">App</p>
                         </div>
                     </li>
                     <li class="portfolio-item">
                         <div class="portfolio-item-wrapper">
-                            <img src="./images/portfolio/taxiservice.jpg" alt="Photo of a taxi driver using a road App" width="360">
+                            <picture>
+                                <source media="(min-width: 768px)"
+                                    srcset="./images/portfolio/taxiservice-tabl-min.jpg 1x, ./images/portfolio/taxiservice-tabl@2x-min.jpg 2x"
+                                    type="image/jpg" />
+                                <source media="(min-width: 1158px)"
+                                    srcset="./images/portfolio/taxiservice-desk-min.jpg 1x, ./images/portfolio/taxiservice-desk@2x-min.jpg 2x"
+                                    type="image/jpg" />
+                                <img class="portfolio-item-img"
+                                    srcset="./images/portfolio/taxiservice-mob-min.jpg 1x, ./images/portfolio/taxiservice-mob@2x-min.jpg 2x" type="image/jpg"
+                                    src="./images/portfolio/taxiservice-mob-min.jpg" alt="Photo of a taxi driver using a road App" width="288px"
+                                    loading="lazy">
+                            </picture>
                             <p class="overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App ·
                                 Exotic Fruit Ecommerce App ·
                                 Cloud Storage App</p>
                         </div>
-                        <div class="portfolio-info">
-                            <h3 class="portfolio-subtitle">Taxi Service</h3>
-                            <p class="portfolio-text">Marketing</p>
+                        <div class="portfolio-item-content">
+                            <h3 class="features-subtitle">Taxi Service</h3>
+                            <p class="features-text">Marketing</p>
                         </div>
                     </li>
                     <li class="portfolio-item">
                         <div class="portfolio-item-wrapper">
-                            <img src="./images/portfolio/screenillustrations.jpg" alt="Image of screen illustrations designed by WebStudio" width="360">
+                            <picture>
+                                <source media="(min-width: 768px)"
+                                    srcset="./images/portfolio/screenillustrations-tabl-min.jpg 1x, ./images/portfolio/screenillustrations-tabl@2x-min.jpg 2x"
+                                    type="image/jpg" />
+                                <source media="(min-width: 1158px)"
+                                    srcset="./images/portfolio/screenillustrations-desk-min.jpg 1x, ./images/portfolio/screenillustrations-desk@2x-min.jpg 2x"
+                                    type="image/jpg" />
+                                <img class="portfolio-item-img"
+                                    srcset="./images/portfolio/screenillustrations-mob-min.jpg 1x, ./images/portfolio/screenillustrations-mob@2x-min.jpg 2x" type="image/jpg"
+                                    src="./images/portfolio/screenillustrations-mob-min.jpg" alt="Image of screen illustrations designed by WebStudio" width="288px"
+                                    loading="lazy">
+                            </picture>
                             <p class="overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App ·
                                 Exotic Fruit Ecommerce App ·
                                 Cloud Storage App</p>
                         </div>
-                        <div class="portfolio-info">
-                            <h3 class="portfolio-subtitle">Screen Illustrations</h3>
-                            <p class="portfolio-text">Design</p>
+                        <div class="portfolio-item-content">
+                            <h3 class="features-subtitle">Screen Illustrations</h3>
+                            <p class="features-text">Design</p>
                         </div>
                     </li>
                     <li class="portfolio-item">
                         <div class="portfolio-item-wrapper">
-                        <img src="./images/portfolio/onlinecourses.jpg"
-                            alt="Photo of a girl making a videocall through a mobile app developed by WebStudio" width="360">
+                            <picture>
+                                <source media="(min-width: 768px)"
+                                    srcset="./images/portfolio/onlinecourses-tabl-min.jpg 1x, ./images/portfolio/onlinecourses-tabl@2x-min.jpg 2x"
+                                    type="image/jpg" />
+                                <source media="(min-width: 1158px)"
+                                    srcset="./images/portfolio/onlinecourses-desk-min.jpg 1x, ./images/portfolio/onlinecourses-desk@2x-min.jpg 2x"
+                                    type="image/jpg" />
+                                <img class="portfolio-item-img"
+                                    srcset="./images/portfolio/onlinecourses-mob-min.jpg 1x, ./images/portfolio/onlinecourses-mob@2x-min.jpg 2x" type="image/jpg"
+                                    src="./images/portfolio/onlinecourses-mob-min.jpg" alt="Photo of a girl making a videocall through a mobile app developed by WebStudio"
+                                    width="288px" loading="lazy">
+                            </picture>
                             <p class="overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App ·
                                 Exotic Fruit Ecommerce App ·
                                 Cloud Storage App</p>
                         </div>
-                        <div class="portfolio-info">
-                            <h3 class="portfolio-subtitle">Online Courses</h3>
-                            <p class="portfolio-text">Marketing</p>
+                        <div class="portfolio-item-content">
+                            <h3 class="features-subtitle">Online Courses</h3>
+                            <p class="features-text">Marketing</p>
                         </div>
                     </li>
                 </ul>
             </div>
         </section>
-    </main>
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-logo">
@@ -349,28 +409,28 @@
                 <p class="social-media">Social media</p>
                 <ul class="footer-social">
                     <li class="footer-social-link">
-                        <a href="" class="social-link">
+                        <a href="" class="social-link" target="_blank" rel="noopener norefferer" aria-label="Link to Instagram site">
                             <svg class="social-icon" width="24" height="24">
                                 <use href="./images/icons.svg#icon-instagram"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="footer-social-link">
-                        <a href="" class="social-link">
+                        <a href="" class="social-link" target="_blank" rel="noopener norefferer" aria-label="Link to Twitter site">
                             <svg class="social-icon" width="24" height="24">
                                 <use href="./images/icons.svg#icon-twitter"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="footer-social-link">
-                        <a href="" class="social-link">
+                        <a href="" class="social-link" target="_blank" rel="noopener norefferer" aria-label="Link to Facebook site">
                             <svg class="social-icon" width="24" height="24">
                                 <use href="./images/icons.svg#icon-facebook"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="footer-social-link">
-                        <a href="" class="social-link">
+                        <a href="" class="social-link" target="_blank" rel="noopener norefferer" aria-label="Link to Linkedin site">
                             <svg class="social-icon" width="24" height="24">
                                 <use href="./images/icons.svg#icon-linkedin"></use>
                             </svg>
@@ -450,6 +510,62 @@
                 <button type="submit" class="btn modal-btn">Send</button>
             </form>
         </div>
+    </div>
+    <div class="mobile-menu">
+        <button class="modal-close-btn menu-close-btn" type="button" aria-label="Mobile Menu close button">
+            <svg class="modal-close-icon" width="8" height="8">
+                <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+        <ul class="mobile-menu-list">
+            <li>
+                <a href="./index.html" class="mobile-menu-link active">Studio</a>
+            </li>
+            <li>
+                <a href="" class="mobile-menu-link">Portfolio</a>
+            </li>
+            <li>
+                <a href="" class="mobile-menu-link">Contacts</a>
+            </li>
+        </ul>
+        <ul class="mobile-menu-address">
+            <li>
+                <a href="mailto:info@devstudio.com" class="mobile-contacts-address accent">info@devstudio.com</a>
+            </li>
+            <li>
+                <a href="tel:+110001111111" class="mobile-contacts-address">+11 (000) 111-11-11</a>
+            </li>
+        </ul>
+        <ul class="mobile-menu-socials">
+            <li class="mobile-menu-social-link">
+                <a href="" class="social-link" target="_blank" rel="noopener norefferer" aria-label="Link to Instagram site">
+                    <svg class="social-icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="mobile-menu-social-link">
+                <a href="" class="social-link" target="_blank" rel="noopener norefferer" aria-label="Link to Twitter site">
+                    <svg class="social-icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="mobile-menu-social-link">
+                <a href="" class="social-link" target="_blank" rel="noopener norefferer" aria-label="Link to Facebook site">
+                    <svg class="social-icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="mobile-menu-social-link">
+                <a href="" class="social-link" target="_blank" rel="noopener norefferer" aria-label="Link to Linkedin site">
+                    <svg class="social-icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
     </div>
 </body>
 </html>
